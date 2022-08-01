@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B115D59F-8085-4BF0-B5CF-E07EFEFB54EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HRMS.SQLServerDAL</RootNamespace>
+    <AssemblyName>HRMS.SQLServerDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\HRMS.Web\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminDAL.cs" />
+    <Compile Include="applets\customerDAL.cs" />
+    <Compile Include="applets\industryDAL.cs" />
+    <Compile Include="applets\typeDAL.cs" />
+    <Compile Include="Article\IArticleDAL.cs" />
+    <Compile Include="cpweb\applytypeDAL.cs" />
+    <Compile Include="cpweb\industryDAL.cs" />
+    <Compile Include="cpweb\listDAL.cs" />
+    <Compile Include="Label\ILabelDAL.cs" />
+    <Compile Include="Label\ISlidesDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\IColumnDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HRMS.DBUtility\HRMS.DBUtility.csproj">
+      <Project>{4FA897A5-BBB9-42F6-8D83-50E8DFC92148}</Project>
+      <Name>HRMS.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRMS.IDAL\HRMS.IDAL.csproj">
+      <Project>{3FD4676A-CDC6-4B7E-9C8C-E5C6B65E68FE}</Project>
+      <Name>HRMS.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRMS.Model\HRMS.Model.csproj">
+      <Project>{06AFF239-642D-4A8C-9446-B84692C6884A}</Project>
+      <Name>HRMS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
